@@ -1,0 +1,15 @@
+<html>
+<head>
+<script>
+chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+    if (request.method == "getPremium")
+      sendResponse({status: localStorage.premiumCode});
+    else
+      sendResponse({}); // snub them.
+});
+</script>
+</head>
+<body>
+</body>
+</html>
+
